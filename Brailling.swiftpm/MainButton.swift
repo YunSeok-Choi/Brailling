@@ -17,6 +17,7 @@ struct MainButton: View {
             .frame(width: 296, height: 120)
             .background(.black)
             .cornerRadius(50)
+            .padding(24)
     }
 }
 

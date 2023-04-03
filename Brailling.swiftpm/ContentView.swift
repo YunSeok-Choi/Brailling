@@ -25,17 +25,14 @@ struct ContentView: View {
                     NavigationLink(destination: EmptyView()) {
                        MainButton(label: "Braille Dictionary")
                     }
-                    .padding(24)
                     
                     NavigationLink(destination: EmptyView()) {
                         MainButton(label: "Alphabet Game")
                     }
-                    .padding(24)
                     
                     NavigationLink(destination: EmptyView()) {
                         MainButton(label: "Word Typing Game")
                     }
-                    .padding(24)
                     
                 }
                 .padding()
