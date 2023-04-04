@@ -22,16 +22,16 @@ struct ContentView: View {
                 
                 HStack {
                     
-                    NavigationLink(destination: EmptyView()) {
-                       MainButton(label: "Braille Dictionary")
+                    NavigationLink(destination: DictionaryView()) {
+                       MainButtonView(label: "Braille Dictionary")
                     }
                     
                     NavigationLink(destination: EmptyView()) {
-                        MainButton(label: "Alphabet Game")
+                        MainButtonView(label: "Alphabet Game")
                     }
                     
                     NavigationLink(destination: EmptyView()) {
-                        MainButton(label: "Word Typing Game")
+                        MainButtonView(label: "Word Typing Game")
                     }
                     
                 }

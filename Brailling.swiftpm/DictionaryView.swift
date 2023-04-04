@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct DictionaryView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct DictionaryView_Previews: PreviewProvider {
-    static var previews: some View {
-        DictionaryView()
+        HStack {
+            NavigationView {
+                List {
+                    
+                }
+            }
+            .navigationTitle("Alphabet")
+            
+            VStack {
+                // 동그라미와 분리
+                Text("A a")
+                
+                BrailleView(circleColor: [true, false, true, true, true, true])
+                
+            }
+        }
     }
 }
