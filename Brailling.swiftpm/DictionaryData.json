@@ -15,126 +15,126 @@
         {
             "id" : 2,
             "charactor" : "B b"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, false, false, false, false]
         },
         {
             "id" : 3,
             "charactor" : "C c"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, false, true, false, false]
         },
         {
             "id" : 4,
             "charactor" : "D d"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, false, true, true, false]
         },
         {
             "id" : 5,
             "charactor" : "E e"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, false, false, true, false]
         },
         {
             "id" : 6,
             "charactor" : "F f"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, false, true, false, false]
         },{
             "id" : 7,
             "charactor" : "G g"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, false, true, true, false]
         },
         {
             "id" : 8,
             "charactor" : "H h"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, false, false, true, false]
         },
         {
             "id" : 9,
             "charactor" : "I i"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [false, true, false, true, false, false]
         },
         {
             "id" : 10,
             "charactor" : "J j"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [false, true, false, true, true, false]
         },
         {
             "id" : 11,
             "charactor" : "K k"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, false, false, false]
         },
         {
             "id" : 12,
             "charactor" : "L l"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, true, false, false, false]
         },
         {
             "id" : 13,
             "charactor" : "M m"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, true, false, false]
         },
         {
             "id" : 14,
             "charactor" : "N n"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, true, true, false]
         },
         {
             "id" : 15,
             "charactor" : "O o"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, false, true, false]
         },
         {
             "id" : 16,
             "charactor" : "P p"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, true, true, false, false]
         },
         {
             "id" : 17,
             "charactor" : "Q q"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, true, true, true, false]
         },
         {
             "id" : 18,
             "charactor" : "R r"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, true, false, true, false]
         },
         {
             "id" : 19,
             "charactor" : "S s"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [false, true, true, true, false, false]
         },
         {
             "id" : 20,
             "charactor" : "T t"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [false, true, true, true, true, false]
         },
         {
             "id" : 21,
             "charactor" : "U u"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, false, false, true]
         },
         {
             "id" : 22,
             "charactor" : "V v"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, true, true, false, false, true]
         },
         {
             "id" : 23,
             "charactor" : "W w"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [false, true, false, true, true, true]
         },
         {
             "id" : 24,
             "charactor" : "X x"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, true, false, true]
         },
         {
             "id" : 25,
             "charactor" : "Y y"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, true, true, true]
         },
         {
             "id" : 26,
             "charactor" : "Z z"
-            "braille" : [true, false, false, false, false, false]
+            "braille" : [true, false, true, false, true, true]
         }
         
 ]
