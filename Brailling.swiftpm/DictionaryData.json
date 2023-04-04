@@ -1,0 +1,16 @@
+/* 
+  DictionaryData.json
+  Brailling
+
+  Created by 최윤석 on 2023/04/04.
+  
+*/
+
+[
+        {
+            "id" : 1,
+            "charactor" : "A a"
+            "braille" : [true, false, false, false, false, false]
+        },
+        
+]
