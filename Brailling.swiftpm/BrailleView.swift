@@ -20,20 +20,21 @@ struct BrailleView: View {
             VStack {
                 
                 BrailleCricle(circleColor: $circleColor[0], isTab: $viewTab)
-                    
+                    .padding(.leading)
                 BrailleCricle(circleColor: $circleColor[1], isTab: $viewTab)
-                
+                    .padding(.leading)
                 BrailleCricle(circleColor: $circleColor[2], isTab: $viewTab)
+                    .padding(.leading)
             }
             
             VStack {
                 
                 BrailleCricle(circleColor: $circleColor[3], isTab: $viewTab)
-                
+                    .padding(.trailing)
                 BrailleCricle(circleColor: $circleColor[4], isTab: $viewTab)
-                
+                    .padding(.trailing)
                 BrailleCricle(circleColor: $circleColor[5], isTab: $viewTab)
-                
+                    .padding(.trailing)
             }
             
         }

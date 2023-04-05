@@ -7,7 +7,7 @@
 
 import Foundation
 
-let alphabetData: [AlphabetData] = load("DictionaryData.json")
+let alphabetData: [Alphabet] = load("DictionaryData.json")
 
 func load <T: Decodable> (_ filename: String) -> T {
     

@@ -7,9 +7,7 @@
 
 import Foundation
 
-
-
-struct AlphabetData : Codable, Identifiable {
+struct Alphabet : Hashable, Decodable, Identifiable {
     let id : Int
     let charactor : String
     let braille : [Bool]
