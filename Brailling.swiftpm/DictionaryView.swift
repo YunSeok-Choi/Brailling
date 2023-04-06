@@ -13,40 +13,9 @@ struct DictionaryView: View {
         HStack {
             NavigationView {
                 List(alphabetData, id: \.id) { alphabet in
-                    NavigationLink("\(alphabet.charactor)", destination: AlphabetView(alphabet: alphabet))
+                    NavigationLink("\(alphabet.charactor)", destination: AlphabetView(alphabet: alphabet, circleCheck: alphabet.braille))
                 }
             }
-        }
-    }
-}
-
-struct AlphabetView: View {
-    
-    var alphabet: Alphabet
-    
-    var body: some View {
-        GeometryReader { geometry in
-            HStack {
-                
-                Spacer()
-                    .padding()
-                
-                VStack {
-                    Spacer()
-                    
-                    Text("\(alphabet.charactor)")
-                        .font(.system(size: 96))
-                        .fontWeight(.bold)
-                    
-                    BrailleView(circleColor: alphabet.braille)
-                    
-                    Spacer()
-                }
-                
-                Spacer()
-                    .padding()
-            }
-            .ignoresSafeArea(.all)
         }
     }
 }

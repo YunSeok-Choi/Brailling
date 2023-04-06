@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Alphabet : Hashable, Decodable, Identifiable {
     let id : Int

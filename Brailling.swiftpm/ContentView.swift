@@ -26,7 +26,7 @@ struct ContentView: View {
                        MainButtonView(label: "Braille Dictionary")
                     }
                     
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: AlphabetGameView()) {
                         MainButtonView(label: "Alphabet Game")
                     }
                     
