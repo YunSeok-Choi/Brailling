@@ -14,17 +14,44 @@ struct AlphabetGameView: View {
     
     var body: some View {
         VStack {
-
+            
+            Spacer()
+            
             AlphabetView(alphabet: alphabetData[randomIndex], viewTab: true)
             
             HStack {
-                Button("Clear") {
+                
+                Spacer()
+                
+                Button {
                     
+                } label: {
+                    Text("CLEAR")
+                        .padding(.horizontal, 48)
+                        .padding(.vertical, 24)
+                        .font(.system(.title2).bold())
+                        .foregroundColor(.red)
+                        .background(.selection)
+                        .cornerRadius(50)
+                        .padding(.vertical, 24)
                 }
                 
-                Button("Done") {
+                Spacer()
+                
+                Button {
                     
+                } label: {
+                    Text("DONE")
+                        .padding(.horizontal, 48)
+                        .padding(.vertical, 24)
+                        .font(.system(.title2).bold())
+                        .foregroundColor(.white)
+                        .background(.black)
+                        .cornerRadius(50)
+                        .padding(.vertical, 24)
                 }
+                
+                Spacer()
                 
             }
             

@@ -15,7 +15,7 @@ struct BrailleCricle: View {
     var body: some View {
         
         Circle()
-            .fill(circleColor ? .black : .gray)
+            .fill(circleColor ? .primary : .secondary)
             .padding()
             .onTapGesture {
                 if isTab {
