@@ -12,6 +12,7 @@ struct AlphabetGameView: View {
     @State var tabBool = true
     var randomIndex: Int = Int.random(in: 0..<alphabetData.count)
     
+    
     var body: some View {
         VStack {
             
@@ -19,43 +20,23 @@ struct AlphabetGameView: View {
             
             AlphabetView(alphabet: alphabetData[randomIndex], viewTab: true)
             
-            HStack {
-                
-                Spacer()
-                
-                Button {
-                    
-                } label: {
-                    Text("CLEAR")
-                        .padding(.horizontal, 48)
-                        .padding(.vertical, 24)
-                        .font(.system(.title2).bold())
-                        .foregroundColor(.red)
-                        .background(.selection)
-                        .cornerRadius(50)
-                        .padding(.vertical, 24)
-                }
-                
-                Spacer()
-                
-                Button {
-                    
-                } label: {
-                    Text("DONE")
-                        .padding(.horizontal, 48)
-                        .padding(.vertical, 24)
-                        .font(.system(.title2).bold())
-                        .foregroundColor(.white)
-                        .background(.black)
-                        .cornerRadius(50)
-                        .padding(.vertical, 24)
-                }
-                
-                Spacer()
-                
+            Button {
+
+            } label: {
+                Text("DONE")
+                    .padding(.horizontal, 48)
+                    .padding(.vertical, 24)
+                    .font(.system(.title2).bold())
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .cornerRadius(50)
+                    .padding(.vertical, 24)
             }
+            
             
         }
         
     }
+    
 }
+
