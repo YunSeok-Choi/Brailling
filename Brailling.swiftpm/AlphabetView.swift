@@ -10,6 +10,7 @@ import SwiftUI
 struct AlphabetView: View {
     
     var alphabet: Alphabet
+    @EnvironmentObject var checkAnswer: AlphabetAnswer
     @State var viewTab = false
     @State var circleCheck: [Bool] = [false, false, false,
                                       false, false, false]
@@ -52,7 +53,9 @@ struct AlphabetView: View {
                         }
                         
                     }
-//                    BrailleView(circleCheck: alphabet.braille)
+                    .onChange(of: circleCheck) { value in
+                        self.checkAnswer.answer = value
+                    }
                     
                     Spacer()
                 }
