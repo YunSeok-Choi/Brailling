@@ -14,4 +14,496 @@
         "wordID" : [5, 8, 17, 4],
         "answer" : "fire"
     },
+    {
+        "id" : 3,
+        "wordID" : [2, 11, 4, 0, 17],
+        "answer" : "clear"
+    },
+    {
+        "id" : 4,
+        "wordID" : [3, 0, 17, 10],
+        "answer" : "dark"
+    },
+    {
+        "id" : 5,
+        "wordID" : [4, 0, 18, 19],
+        "answer" : "east"
+    },
+    {
+        "id" : 6,
+        "wordID" : [5, 0, 17, 12],
+        "answer" : "farm"
+    },
+    {
+        "id" : 7,
+        "wordID" : [6, 8, 5, 19],
+        "answer" : "gift"
+    },
+    {
+        "id" : 8,
+        "wordID" : [7, 0, 8, 17],
+        "answer" : "hair"
+    },
+    {
+        "id" : 9,
+        "wordID" : [8, 3, 4, 0],
+        "answer" : "idea"
+    },
+    {
+        "id" : 10,
+        "wordID" : [9, 20, 12, 15],
+        "answer" : "jump"
+    },
+    {
+        "id" : 11,
+        "wordID" : [10, 8, 13, 6],
+        "answer" : "king"
+    },
+    {
+        "id" : 12,
+        "wordID" : [11, 0, 18, 19],
+        "answer" : "last"
+    },
+    {
+        "id" : 13,
+        "wordID" : [13, 4, 23, 19],
+        "answer" : "next"
+    },
+    {
+        "id" : 14,
+        "wordID" : [14, 13, 11, 24],
+        "answer" : "only"
+    },
+    {
+        "id" : 15,
+        "wordID" : [15, 8, 2, 10],
+        "answer" : "pick"
+    },
+    {
+        "id" : 16,
+        "wordID" : [15, 11, 0, 24],
+        "answer" : "play"
+    },
+    {
+        "id" : 17,
+        "wordID" : [17, 4, 0, 3],
+        "answer" : "read"
+    },
+    {
+        "id" : 18,
+        "wordID" : [17, 8, 2, 4],
+        "answer" : "rice"
+    },
+    {
+        "id" : 19,
+        "wordID" : [18, 0, 5, 4],
+        "answer" : "safe"
+    },
+    {
+        "id" : 20,
+        "wordID" : [18, 0, 11, 19],
+        "answer" : "salt"
+    },
+    {
+        "id" : 21,
+        "wordID" : [18, 8, 25, 4],
+        "answer" : "size"
+    },
+    {
+        "id" : 22,
+        "wordID" : [18, 4, 11, 11],
+        "answer" : "sell"
+    },
+    {
+        "id" : 23,
+        "wordID" : [19, 0, 11, 10],
+        "answer" : "talk"
+    },
+    {
+        "id" : 24,
+        "wordID" : [19, 4, 0, 12],
+        "answer" : "team"
+    },
+    {
+        "id" : 25,
+        "wordID" : [19, 17, 20, 4],
+        "answer" : "true"
+    },
+    {
+        "id" : 26,
+        "wordID" : [19, 20, 17, 13],
+        "answer" : "turn"
+    },
+    {
+        "id" : 27,
+        "wordID" : [20, 13, 8, 19],
+        "answer" : "unit"
+    },
+    {
+        "id" : 28,
+        "wordID" : [21, 8, 18, 8, 19],
+        "answer" : "visit"
+    },
+    {
+        "id" : 29,
+        "wordID" : [21, 14, 8, 2, 4],
+        "answer" : "voice"
+    },
+    {
+        "id" : 30,
+        "wordID" : [22, 0, 8, 19],
+        "answer" : "wait"
+    },
+    {
+        "id" : 31,
+        "wordID" : [22, 0, 10, 4],
+        "answer" : "wake"
+    },
+    {
+        "id" : 32,
+        "wordID" : [22, 4, 0, 10],
+        "answer" : "weak"
+    },
+    {
+        "id" : 33,
+        "wordID" : [22, 8, 5, 4],
+        "answer" : "wife"
+    },
+    {
+        "id" : 34,
+        "wordID" : [22, 17, 8, 19, 4],
+        "answer" : "write"
+    },
+    {
+        "id" : 35,
+        "wordID" : [22, 14, 12, 0, 13],
+        "answer" : "woman"
+    },
+    {
+        "id" : 36,
+        "wordID" : [0, 13, 6, 17, 24],
+        "answer" : "angry"
+    },
+    {
+        "id" : 37,
+        "wordID" : [0, 20, 13, 19],
+        "answer" : "aunt"
+    },
+    {
+        "id" : 38,
+        "wordID" : [0, 22, 0, 24],
+        "answer" : "away"
+    },
+    {
+        "id" : 39,
+        "wordID" : [0, 2, 19, 14, 17],
+        "answer" : "actor"
+    },
+    {
+        "id" : 40,
+        "wordID" : [1, 0, 2, 10],
+        "answer" : "back"
+    },
+    {
+        "id" : 41,
+        "wordID" : [1, 0, 11, 11],
+        "answer" : "ball"
+    },
+    {
+        "id" : 42,
+        "wordID" : [1, 8, 17, 3],
+        "answer" : "bird"
+    },
+    {
+        "id" : 43,
+        "wordID" : [1, 11, 20, 4],
+        "answer" : "blue"
+    },
+    {
+        "id" : 44,
+        "wordID" : [1, 14, 3, 24],
+        "answer" : "body"
+    },
+    {
+        "id" : 45,
+        "wordID" : [1, 14, 14, 10],
+        "answer" : "book"
+    },
+    {
+        "id" : 46,
+        "wordID" : [1, 20, 17, 13],
+        "answer" : "burn"
+    },
+    {
+        "id" : 47,
+        "wordID" : [2, 0, 18, 4],
+        "answer" : "case"
+    },
+    {
+        "id" : 48,
+        "wordID" : [2, 14, 11, 3],
+        "answer" : "cold"
+    },
+    {
+        "id" : 49,
+        "wordID" : [2, 11, 0, 18, 18],
+        "answer" : "class"
+    },
+    {
+        "id" : 50,
+        "wordID" : [3, 4, 0, 3],
+        "answer" : "dead"
+    },
+    {
+        "id" : 51,
+        "wordID" : [3, 17, 0, 22],
+        "answer" : "draw"
+    },
+    {
+        "id" : 52,
+        "wordID" : [3, 17, 8, 21, 4],
+        "answer" : "drive"
+    },
+    {
+        "id" : 53,
+        "wordID" : [3, 17, 14, 15],
+        "answer" : "drop"
+    },
+    {
+        "id" : 54,
+        "wordID" : [5, 0, 2, 4],
+        "answer" : "face"
+    },
+    {
+        "id" : 55,
+        "wordID" : [5, 0, 8, 11],
+        "answer" : "fail"
+    },
+    {
+        "id" : 56,
+        "wordID" : [5, 4, 4, 11],
+        "answer" : "feel"
+    },
+    {
+        "id" : 57,
+        "wordID" : [5, 17, 4, 4],
+        "answer" : "free"
+    },
+    {
+        "id" : 58,
+        "wordID" : [5, 17, 14, 13, 19],
+        "answer" : "front"
+    },
+    {
+        "id" : 59,
+        "wordID" : [6, 14, 11, 3],
+        "answer" : "gold"
+    },
+    {
+        "id" : 60,
+        "wordID" : [6, 11, 0, 18, 18],
+        "answer" : "glass"
+    },
+    {
+        "id" : 61,
+        "wordID" : [7, 0, 11, 5],
+        "answer" : "half"
+    },
+    {
+        "id" : 62,
+        "wordID" : [7, 0, 19, 4],
+        "answer" : "hate"
+    },
+    {
+        "id" : 63,
+        "wordID" : [7, 4, 0, 3],
+        "answer" : "head"
+    },
+    {
+        "id" : 64,
+        "wordID" : [7, 4, 11, 11, 14],
+        "answer" : "hello"
+    },
+    {
+        "id" : 65,
+        "wordID" : [7, 8, 3, 4],
+        "answer" : "hide"
+    },
+    {
+        "id" : 66,
+        "wordID" : [7, 14, 11, 3],
+        "answer" : "hold"
+    },
+    {
+        "id" : 67,
+        "wordID" : [7, 14, 17, 18, 4],
+        "answer" : "horse"
+    },
+    {
+        "id" : 68,
+        "wordID" : [7, 14, 19, 4, 11],
+        "answer" : "hotel"
+    },
+    {
+        "id" : 69,
+        "wordID" : [7, 20, 17, 19],
+        "answer" : "hurt"
+    },
+    {
+        "id" : 70,
+        "wordID" : [8, 17, 14, 13],
+        "answer" : "iron"
+    },
+    {
+        "id" : 71,
+        "wordID" : [9, 20, 8, 2, 4],
+        "answer" : "juice"
+    },
+    {
+        "id" : 72,
+        "wordID" : [10, 13, 4, 4],
+        "answer" : "knee"
+    },
+    {
+        "id" : 73,
+        "wordID" : [10, 13, 8, 5, 4],
+        "answer" : "knife"
+    },
+    {
+        "id" : 74,
+        "wordID" : [10, 8, 13, 3],
+        "answer" : "kind"
+    },
+    {
+        "id" : 75,
+        "wordID" : [11, 0, 3, 24],
+        "answer" : "lady"
+    },
+    {
+        "id" : 76,
+        "wordID" : [11, 0, 19, 4],
+        "answer" : "late"
+    },
+    {
+        "id" : 77,
+        "wordID" : [11, 4, 5, 19],
+        "answer" : "left"
+    },
+    {
+        "id" : 78,
+        "wordID" : [11, 8, 14, 13],
+        "answer" : "lion"
+    },
+    {
+        "id" : 79,
+        "wordID" : [11, 8, 21, 4],
+        "answer" : "live"
+    },
+    {
+        "id" : 80,
+        "wordID" : [11, 14, 14, 10],
+        "answer" : "look"
+    },
+    {
+        "id" : 81,
+        "wordID" : [11, 14, 21, 4],
+        "answer" : "love"
+    },
+    {
+        "id" : 82,
+        "wordID" : [11, 20, 2, 10],
+        "answer" : "luck"
+    },
+    {
+        "id" : 83,
+        "wordID" : [12, 0, 11, 4],
+        "answer" : "male"
+    },
+    {
+        "id" : 84,
+        "wordID" : [12, 8, 11, 10],
+        "answer" : "milk"
+    },
+    {
+        "id" : 85,
+        "wordID" : [12, 8, 18, 18],
+        "answer" : "miss"
+    },
+    {
+        "id" : 86,
+        "wordID" : [12, 14, 14, 13],
+        "answer" : "moon"
+    },
+    {
+        "id" : 87,
+        "wordID" : [12, 20, 18, 8, 2],
+        "answer" : "music"
+    },
+    {
+        "id" : 88,
+        "wordID" : [13, 14, 18, 4],
+        "answer" : "nose"
+    },
+    {
+        "id" : 89,
+        "wordID" : [14, 2, 4, 0, 13],
+        "answer" : "ocean"
+    },
+    {
+        "id" : 90,
+        "wordID" : [19, 17, 0, 8, 13],
+        "answer" : "train"
+    },
+    {
+        "id" : 91,
+        "wordID" : [15, 0, 6, 4],
+        "answer" : "page"
+    },
+    {
+        "id" : 92,
+        "wordID" : [15, 8, 0, 13, 14],
+        "answer" : "piano"
+    },
+    {
+        "id" : 93,
+        "wordID" : [15, 14, 14, 17],
+        "answer" : "poor"
+    },
+    {
+        "id" : 94,
+        "wordID" : [19, 4, 11, 11],
+        "answer" : "tell"
+    },
+    {
+        "id" : 95,
+        "wordID" : [17, 4, 0, 11],
+        "answer" : "real"
+    },
+    {
+        "id" : 96,
+        "wordID" : [1, 8, 10, 4],
+        "answer" : "bike"
+    },
+    {
+        "id" : 97,
+        "wordID" : [17, 20, 11, 4],
+        "answer" : "rule"
+    },
+    {
+        "id" : 98,
+        "wordID" : [18, 15, 14, 17, 19],
+        "answer" : "sport"
+    },
+    {
+        "id" : 99,
+        "wordID" : [18, 22, 8, 12],
+        "answer" : "swim"
+    },
+    {
+        "id" : 100,
+        "wordID" : [1, 14, 17, 13],
+        "answer" : "born"
+    },
+
+    
 ]
