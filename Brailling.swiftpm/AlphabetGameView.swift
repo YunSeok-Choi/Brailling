@@ -19,12 +19,12 @@ struct AlphabetGameView: View {
             
             Spacer()
             
-            AlphabetView(alphabet: alphabetData[checkAnswer.randomIndex], viewTab: true)
+            AlphabetView(alphabet: alphabetData[checkAnswer.alphabetRandomIndex], viewTab: true)
             
             Button {
-                if checkAnswer.answer == alphabetData[checkAnswer.randomIndex].braille {
+                if checkAnswer.answer == alphabetData[checkAnswer.alphabetRandomIndex].braille {
                     checkAnswer.doneCheck = true
-                    checkAnswer.shuffle()
+                    checkAnswer.alphabetShuffle()
                     // Answer Sound
                 } else {
                     showingAlert = true
@@ -47,6 +47,9 @@ struct AlphabetGameView: View {
             }
             
             
+        }
+        .onAppear {
+            checkAnswer.wordGame = false
         }
         
     }

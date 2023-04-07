@@ -30,7 +30,7 @@ struct ContentView: View {
                         MainButtonView(label: "Alphabet Game")
                     }
                     
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: WordGameView()) {
                         MainButtonView(label: "Word Typing Game")
                     }
                     

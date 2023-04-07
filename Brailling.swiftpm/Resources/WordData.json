@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 0,
+        "wordID" : [0, 15, 15, 11, 4],
+        "answer" : "apple"
+    },
+    {
+        "id" : 1,
+        "wordID" : [19, 17, 4, 4],
+        "answer" : "tree"
+    },
+    {
+        "id" : 2,
+        "wordID" : [5, 8, 17, 4],
+        "answer" : "fire"
+    },
+]

@@ -9,17 +9,29 @@ import SwiftUI
 
 struct WordGameView: View {
     
+    @EnvironmentObject var checkAnswer: WordAnswer
+    @EnvironmentObject var wordGame: AlphabetAnswer
     @State var answerText: String = ""
     var brailles = ["a", "p", "p", "l", "e"] // 디코딩한 값으로 변경필요
+    var randomIndex = 0
     
     var body: some View {
         VStack {
             
             HStack {
-                
+                ForEach(0..<wordData[checkAnswer.wordRandomIndex].wordID.count, id: \.self) { value in
+                    
+                    let char = alphabetData[wordData[checkAnswer.wordRandomIndex].wordID[value]]
+                    
+                    AlphabetView(alphabet: char, circleCheck: char.braille)
+                    
+                }
             }
             
+            
             TextField("What is word?", text: $answerText)
+                .padding()
+            
             
             Button {
                 
@@ -34,6 +46,10 @@ struct WordGameView: View {
                     .padding(.vertical, 24)
             }
             
+            
+        }
+        .onAppear {
+            wordGame.wordGame = true
         }
     }
     

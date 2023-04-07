@@ -18,16 +18,23 @@ struct AlphabetView: View {
         GeometryReader { geometry in
             HStack {
                 
-                Spacer()
-                    .padding()
+                if !checkAnswer.wordGame {
+                    Spacer()
+                        .padding()
+                } else {
+                    Spacer(minLength: 50)
+                }
+                
                 
                 VStack {
                     
                     Spacer()
                     
-                    Text("\(alphabet.charactor)")
-                        .font(.system(size: 96))
-                        .fontWeight(.bold)
+                    if !checkAnswer.wordGame {
+                        Text("\(alphabet.charactor)")
+                            .font(.system(size: 96))
+                            .fontWeight(.bold)
+                    }
                     
                     HStack {
                      
@@ -63,8 +70,12 @@ struct AlphabetView: View {
                     Spacer()
                 }
                 
-                Spacer()
-                    .padding()
+                if !checkAnswer.wordGame {
+                    Spacer()
+                        .padding()
+                } else {
+                    Spacer(minLength: 50)
+                }
             }
             .ignoresSafeArea(.all)
         }

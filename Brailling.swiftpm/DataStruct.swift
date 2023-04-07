@@ -8,8 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Alphabet : Hashable, Decodable, Identifiable {
-    let id : Int
-    let charactor : String
-    let braille : [Bool]
+struct Alphabet: Hashable, Decodable, Identifiable {
+    let id: Int
+    let charactor: String
+    let braille: [Bool]
 }
+
+struct Word: Hashable, Decodable, Identifiable {
+    let id: Int
+    let wordID: [Int]
+    let answer: String
+}
+
