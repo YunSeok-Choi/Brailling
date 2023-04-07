@@ -12,21 +12,23 @@ struct AlphabetGameView: View {
     @EnvironmentObject var checkAnswer: AlphabetAnswer
     @State var tabBool = true
     @State var showingAlert = false
-    var randomIndex: Int = Int.random(in: 0..<alphabetData.count)
-    
+    @State var checkBraille = [false, false, false, false, false, false]
     
     var body: some View {
         VStack {
             
             Spacer()
             
-            AlphabetView(alphabet: alphabetData[randomIndex], viewTab: true)
+            AlphabetView(alphabet: alphabetData[checkAnswer.randomIndex], viewTab: true)
             
             Button {
-                if checkAnswer.answer == alphabetData[randomIndex].braille {
-                    print("맞았습니다")
+                if checkAnswer.answer == alphabetData[checkAnswer.randomIndex].braille {
+                    checkAnswer.doneCheck = true
+                    checkAnswer.shuffle()
+                    // Answer Sound
                 } else {
                     showingAlert = true
+                    // Wrong Sound
                 }
             } label: {
                 Text("DONE")

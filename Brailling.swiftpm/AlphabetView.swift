@@ -12,8 +12,7 @@ struct AlphabetView: View {
     var alphabet: Alphabet
     @EnvironmentObject var checkAnswer: AlphabetAnswer
     @State var viewTab = false
-    @State var circleCheck: [Bool] = [false, false, false,
-                                      false, false, false]
+    @State var circleCheck: [Bool] = [false, false, false, false, false, false]
    
     var body: some View {
         GeometryReader { geometry in
@@ -55,6 +54,10 @@ struct AlphabetView: View {
                     }
                     .onChange(of: circleCheck) { value in
                         self.checkAnswer.answer = value
+                    }
+                    .onChange(of: checkAnswer.doneCheck) { value in
+                        circleCheck = [Bool](repeating: false, count: 6)
+                        checkAnswer.doneCheck = false
                     }
                     
                     Spacer()
