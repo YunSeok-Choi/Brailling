@@ -9,8 +9,7 @@ import SwiftUI
 
 struct WordGameView: View {
     
-    @EnvironmentObject var wordGame: WordAnswer
-    @EnvironmentObject var alphabetGame: AlphabetAnswer
+    @EnvironmentObject var wordGame: GameManager
     @State var answerText: String = ""
     @State var showingAlert = false
     @State var alphabetList: [Alphabet] = []
@@ -64,10 +63,10 @@ struct WordGameView: View {
         }
         .onAppear {
             initList()
-            alphabetGame.isWordGame = true
+            wordGame.isWordGame = true
         }
         .onDisappear {
-            alphabetGame.isWordGame = false
+            wordGame.isWordGame = false
         }
     }
     

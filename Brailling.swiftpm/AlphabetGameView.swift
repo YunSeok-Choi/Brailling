@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlphabetGameView: View {
     
-    @EnvironmentObject var alphabetGame: AlphabetAnswer
+    @EnvironmentObject var alphabetGame: GameManager
     @State var showingAlert = false
     @State var checkBraille = [false, false, false, false, false, false]
     

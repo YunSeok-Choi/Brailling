@@ -10,7 +10,7 @@ import SwiftUI
 struct AlphabetView: View {
     
     var alphabet: Alphabet
-    @EnvironmentObject var alphabetGame: AlphabetAnswer
+    @EnvironmentObject var alphabetGame: GameManager
     @State var viewTab = false
     @State var circleCheck: [Bool] = [false, false, false, false, false, false]
    
@@ -54,7 +54,7 @@ struct AlphabetView: View {
                         
                     }
                     .onChange(of: circleCheck) { value in
-                        self.alphabetGame.answer = value
+                        alphabetGame.answer = value
                     }
                     .onChange(of: alphabetGame.doneCheck) { value in
                         circleCheck = [Bool](repeating: false, count: 6)
