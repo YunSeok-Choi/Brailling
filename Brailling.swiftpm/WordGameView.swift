@@ -32,17 +32,15 @@ struct WordGameView: View {
             
             Button {
                 if answerText.lowercased() == wordData[wordGame.wordRandomIndex].answer {
-                    
                     alphabetList = []
                     answerText = ""
                     
                     wordGame.wordShuffle()
                     initList()
-                    
-                    // Answer Sound
+                    wordGame.soundManager.playSound(sound: .correct)
                 } else {
                     showingAlert = true
-                    // Wrong Sound
+                    wordGame.soundManager.playSound(sound: .wrong)
                 }
             } label: {
                 Text("DONE")

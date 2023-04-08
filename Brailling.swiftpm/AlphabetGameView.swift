@@ -24,9 +24,11 @@ struct AlphabetGameView: View {
                 if alphabetGame.answer == alphabetData[alphabetGame.alphabetRandomIndex].braille {
                     alphabetGame.doneCheck = true
                     alphabetGame.alphabetShuffle()
+                    alphabetGame.soundManager.playSound(sound: .correct)
                     // Answer Sound
                 } else {
                     showingAlert = true
+                    alphabetGame.soundManager.playSound(sound: .wrong)
                     // Wrong Sound
                 }
             } label: {

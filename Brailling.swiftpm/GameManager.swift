@@ -9,6 +9,7 @@ import Foundation
 
 class GameManager: ObservableObject {
     
+    let soundManager = SoundManager.sound
     @Published var alphabetRandomIndex = Int.random(in: 0..<alphabetData.count)
     @Published var answer: [Bool] = [false, false, false, false, false, false]
     @Published var doneCheck = false
