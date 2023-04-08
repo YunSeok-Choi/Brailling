@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DictionaryView: View {
+    @EnvironmentObject var gameManager: GameManager
     
     var body: some View {
         HStack {
@@ -15,6 +16,9 @@ struct DictionaryView: View {
                 List(alphabetData, id: \.id) { alphabet in
                     NavigationLink("\(alphabet.charactor)", destination: AlphabetView(alphabet: alphabet, circleCheck: alphabet.braille))
                 }
+            }
+            .onAppear {
+                gameManager.isWordGame = false
             }
         }
     }

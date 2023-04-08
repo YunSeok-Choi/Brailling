@@ -63,9 +63,6 @@ struct WordGameView: View {
             initList()
             wordGame.isWordGame = true
         }
-        .onDisappear {
-            wordGame.isWordGame = false
-        }
     }
     
     func initList() {

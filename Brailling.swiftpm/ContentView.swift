@@ -1,29 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var gameManager: GameManager
+    var alphabetL = alphabetData[11]
+    
     var body: some View {
         NavigationView {
+            
             VStack {
                 
-                Text("Brailling")
-                    .padding()
-                    .font(.largeTitle)
-                
                 HStack {
+                    Text("Brai")
+                        .font(.system(size: 157, design: .rounded))
+                        .tracking(10)
                     
-                    Text("")
+                    LView.frame(width: 80)
+                        .padding(.trailing, 20)
                     
-                    Rectangle()
-                        .frame(width: 972.0, height: 289.0)
-                        .cornerRadius(50)
-                        .padding(50)
+                    LView.frame(width: 80)
+                    
+                    Text("ing")
+                        .font(.system(size: 157, design: .rounded ))
+                        .tracking(10)
                 }
-                .padding()
                 
                 HStack {
-                    
                     NavigationLink(destination: DictionaryView()) {
-                       MainButtonView(label: "Braille Dictionary")
+                        MainButtonView(label: "Braille Dictionary")
                     }
                     
                     NavigationLink(destination: AlphabetGameView()) {
@@ -33,13 +37,86 @@ struct ContentView: View {
                     NavigationLink(destination: WordGameView()) {
                         MainButtonView(label: "Word Typing Game")
                     }
-                    
                 }
-                .padding()
-                
+                .padding(.bottom, -20)
+            }
+            .onAppear {
+                gameManager.isWordGame = true
             }
         }
         .navigationViewStyle(.stack)
     }
+    
+    var LView: some View {
+        HStack {
+            VStack {
+                Circle()
+                    .fill(.black)
+//                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
+//                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
+                
+                    Circle()
+                        .fill(.black)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
+                
+                    Circle()
+                        .fill(.black)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
+            }
+            VStack {
+                Circle()
+                    .fill(.white)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.gray, lineWidth: 4)
+                            .blur(radius: 4)
+                            .offset(x: 2, y: 2)
+                            .mask(Circle().fill(.linearGradient(colors: [.black, .clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 8)
+                            .blur(radius: 4)
+                            .offset(x: -2, y: -2)
+                            .mask(Circle().fill(.linearGradient(colors: [.black, .clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+                Circle()
+                    .fill(.white)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.gray, lineWidth: 4)
+                            .blur(radius: 4)
+                            .offset(x: 2, y: 2)
+                            .mask(Circle().fill(.linearGradient(colors: [.black, .clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 8)
+                            .blur(radius: 4)
+                            .offset(x: -2, y: -2)
+                            .mask(Circle().fill(.linearGradient(colors: [.black, .clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+                Circle()
+                    .fill(.white)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.gray, lineWidth: 4)
+                            .blur(radius: 4)
+                            .offset(x: 2, y: 2)
+                            .mask(Circle().fill(.linearGradient(colors: [.black, .clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 8)
+                            .blur(radius: 4)
+                            .offset(x: -2, y: -2)
+                            .mask(Circle().fill(.linearGradient(colors: [.black, .clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+            }
+        }
+    }
+    
 }
 

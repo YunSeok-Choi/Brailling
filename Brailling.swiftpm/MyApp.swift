@@ -9,6 +9,7 @@ struct MyApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(gameData)
+                .preferredColorScheme(.light)
         }
     }
 }
