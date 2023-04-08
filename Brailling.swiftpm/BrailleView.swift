@@ -22,6 +22,7 @@ struct BrailleCricle: View {
                     circleColor.toggle()
                 }
             }
+            .animation(.easeInOut(duration: 0.3), value: circleColor)
         
     }
 }

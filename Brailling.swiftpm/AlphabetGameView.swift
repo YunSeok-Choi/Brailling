@@ -10,7 +10,6 @@ import SwiftUI
 struct AlphabetGameView: View {
     
     @EnvironmentObject var alphabetGame: AlphabetAnswer
-    @State var tabBool = true
     @State var showingAlert = false
     @State var checkBraille = [false, false, false, false, false, false]
     
@@ -45,7 +44,6 @@ struct AlphabetGameView: View {
                       message: Text("You can do it! Please try again"),
                       dismissButton: .default(Text("RETURN")))
             }
-            
             
         }
         .onAppear {

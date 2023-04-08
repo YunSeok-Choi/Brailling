@@ -20,9 +20,7 @@ struct WordGameView: View {
             
             HStack {
                 ForEach(alphabetList, id: \.self) { char in
-                    
                     AlphabetView(alphabet: char, circleCheck: char.braille)
-
                 }
             }.padding(.top)
             
@@ -31,7 +29,6 @@ struct WordGameView: View {
                 .frame(width: 200)
                 .textFieldStyle(.roundedBorder)
                 .font(.largeTitle)
-                
             
             Button {
                 if answerText.lowercased() == wordData[wordGame.wordRandomIndex].answer {
@@ -62,8 +59,6 @@ struct WordGameView: View {
                       message: Text("You can do it! Please try again"),
                       dismissButton: .default(Text("RETURN")))
             }
-            
-            
             
         }
         .onAppear {

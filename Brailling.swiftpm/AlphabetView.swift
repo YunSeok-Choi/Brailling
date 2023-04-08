@@ -34,6 +34,7 @@ struct AlphabetView: View {
                         Text("\(alphabet.charactor)")
                             .font(.system(size: 96))
                             .fontWeight(.bold)
+                            .animation(.easeInOut(duration: 0.3))
                     }
                     
                     HStack {
