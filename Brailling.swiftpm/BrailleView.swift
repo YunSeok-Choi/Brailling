@@ -12,7 +12,7 @@ struct BrailleCricle: View {
     @EnvironmentObject var gameManager: GameManager
     @Binding var circleColor: Bool
     @Binding var isTab: Bool
-        
+    
     var body: some View {
         if gameManager.isWordGame {
             WordGameCircle
@@ -21,9 +21,25 @@ struct BrailleCricle: View {
         }
     }
     
+    @ViewBuilder
     var WordGameCircle: some View {
+        
         Circle()
-            .fill(circleColor ? .primary : .secondary)
+            .fill(circleColor ? .black : .white)
+            .overlay(
+                Circle()
+                    .stroke(.gray, lineWidth: 4)
+                    .blur(radius: 4)
+                    .offset(x: 4, y: 4)
+                    .mask(Circle().fill(LinearGradient(.black, .clear)))
+            )
+            .overlay(
+                Circle()
+                    .stroke(.white, lineWidth: 8)
+                    .blur(radius: 4)
+                    .offset(x: -2, y: -2)
+                    .mask(Circle().fill(.clear))
+            )
             .onTapGesture {
                 if isTab {
                     circleColor.toggle()
