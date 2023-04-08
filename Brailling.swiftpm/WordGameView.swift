@@ -37,14 +37,10 @@ struct WordGameView: View {
                 if answerText.lowercased() == wordData[wordGame.wordRandomIndex].answer {
                     
                     alphabetList = []
-                    wordGame.wordShuffle()
-                    
-                    for i in 0..<wordData[wordGame.wordRandomIndex].wordID.count {
-                        let char = alphabetData[wordData[wordGame.wordRandomIndex].wordID[i]]
-                        alphabetList.append(char)
-                    }
-                    
                     answerText = ""
+                    
+                    wordGame.wordShuffle()
+                    initList()
                     
                     // Answer Sound
                 } else {
@@ -71,15 +67,18 @@ struct WordGameView: View {
             
         }
         .onAppear {
+            initList()
             alphabetGame.isWordGame = true
-            for i in 0..<wordData[wordGame.wordRandomIndex].wordID.count {
-                let char = alphabetData[wordData[wordGame.wordRandomIndex].wordID[i]]
-                alphabetList.append(char)
-            }
-
         }
         .onDisappear {
             alphabetGame.isWordGame = false
+        }
+    }
+    
+    func initList() {
+        for i in 0..<wordData[wordGame.wordRandomIndex].wordID.count {
+            let char = alphabetData[wordData[wordGame.wordRandomIndex].wordID[i]]
+            alphabetList.append(char)
         }
     }
     
