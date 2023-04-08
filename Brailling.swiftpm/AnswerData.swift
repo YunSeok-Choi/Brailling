@@ -12,7 +12,7 @@ class AlphabetAnswer: ObservableObject {
     @Published var alphabetRandomIndex = Int.random(in: 0..<alphabetData.count)
     @Published var answer: [Bool] = [false, false, false, false, false, false]
     @Published var doneCheck = false
-    @Published var wordGame = false
+    @Published var isWordGame = false
     
     func alphabetShuffle() {
         alphabetRandomIndex = Int.random(in: 0..<alphabetData.count)

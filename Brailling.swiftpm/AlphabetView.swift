@@ -10,7 +10,7 @@ import SwiftUI
 struct AlphabetView: View {
     
     var alphabet: Alphabet
-    @EnvironmentObject var checkAnswer: AlphabetAnswer
+    @EnvironmentObject var alphabetGame: AlphabetAnswer
     @State var viewTab = false
     @State var circleCheck: [Bool] = [false, false, false, false, false, false]
    
@@ -18,7 +18,7 @@ struct AlphabetView: View {
         GeometryReader { geometry in
             HStack {
                 
-                if !checkAnswer.wordGame {
+                if !alphabetGame.isWordGame {
                     Spacer()
                         .padding()
                 } else {
@@ -30,7 +30,7 @@ struct AlphabetView: View {
                     
                     Spacer()
                     
-                    if !checkAnswer.wordGame {
+                    if !alphabetGame.isWordGame {
                         Text("\(alphabet.charactor)")
                             .font(.system(size: 96))
                             .fontWeight(.bold)
@@ -60,17 +60,17 @@ struct AlphabetView: View {
                         
                     }
                     .onChange(of: circleCheck) { value in
-                        self.checkAnswer.answer = value
+                        self.alphabetGame.answer = value
                     }
-                    .onChange(of: checkAnswer.doneCheck) { value in
+                    .onChange(of: alphabetGame.doneCheck) { value in
                         circleCheck = [Bool](repeating: false, count: 6)
-                        checkAnswer.doneCheck = false
+                        alphabetGame.doneCheck = false
                     }
                     
                     Spacer()
                 }
                 
-                if !checkAnswer.wordGame {
+                if !alphabetGame.isWordGame {
                     Spacer()
                         .padding()
                 } else {

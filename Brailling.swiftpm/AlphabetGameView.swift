@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlphabetGameView: View {
     
-    @EnvironmentObject var checkAnswer: AlphabetAnswer
+    @EnvironmentObject var alphabetGame: AlphabetAnswer
     @State var tabBool = true
     @State var showingAlert = false
     @State var checkBraille = [false, false, false, false, false, false]
@@ -19,12 +19,12 @@ struct AlphabetGameView: View {
             
             Spacer()
             
-            AlphabetView(alphabet: alphabetData[checkAnswer.alphabetRandomIndex], viewTab: true)
+            AlphabetView(alphabet: alphabetData[alphabetGame.alphabetRandomIndex], viewTab: true)
             
             Button {
-                if checkAnswer.answer == alphabetData[checkAnswer.alphabetRandomIndex].braille {
-                    checkAnswer.doneCheck = true
-                    checkAnswer.alphabetShuffle()
+                if alphabetGame.answer == alphabetData[alphabetGame.alphabetRandomIndex].braille {
+                    alphabetGame.doneCheck = true
+                    alphabetGame.alphabetShuffle()
                     // Answer Sound
                 } else {
                     showingAlert = true
@@ -49,7 +49,7 @@ struct AlphabetGameView: View {
             
         }
         .onAppear {
-            checkAnswer.wordGame = false
+            alphabetGame.isWordGame = false
         }
         
     }

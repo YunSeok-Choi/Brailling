@@ -9,32 +9,48 @@ import SwiftUI
 
 struct WordGameView: View {
     
-    @EnvironmentObject var checkAnswer: WordAnswer
-    @EnvironmentObject var wordGame: AlphabetAnswer
+    @EnvironmentObject var wordGame: WordAnswer
+    @EnvironmentObject var alphabetGame: AlphabetAnswer
     @State var answerText: String = ""
-    var brailles = ["a", "p", "p", "l", "e"] // 디코딩한 값으로 변경필요
-    var randomIndex = 0
+    @State var showingAlert = false
+    @State var alphabetList: [Alphabet] = []
     
     var body: some View {
         VStack {
             
             HStack {
-                ForEach(0..<wordData[checkAnswer.wordRandomIndex].wordID.count, id: \.self) { value in
-                    
-                    let char = alphabetData[wordData[checkAnswer.wordRandomIndex].wordID[value]]
+                ForEach(alphabetList, id: \.self) { char in
                     
                     AlphabetView(alphabet: char, circleCheck: char.braille)
-                    
+
                 }
-            }
+            }.padding(.top)
             
             
-            TextField("What is word?", text: $answerText)
-                .padding()
-            
+            TextField("Typing here", text: $answerText)
+                .frame(width: 200)
+                .textFieldStyle(.roundedBorder)
+                .font(.largeTitle)
+                
             
             Button {
-                
+                if answerText.lowercased() == wordData[wordGame.wordRandomIndex].answer {
+                    
+                    alphabetList = []
+                    wordGame.wordShuffle()
+                    
+                    for i in 0..<wordData[wordGame.wordRandomIndex].wordID.count {
+                        let char = alphabetData[wordData[wordGame.wordRandomIndex].wordID[i]]
+                        alphabetList.append(char)
+                    }
+                    
+                    answerText = ""
+                    
+                    // Answer Sound
+                } else {
+                    showingAlert = true
+                    // Wrong Sound
+                }
             } label: {
                 Text("DONE")
                     .padding(.horizontal, 48)
@@ -45,11 +61,25 @@ struct WordGameView: View {
                     .cornerRadius(50)
                     .padding(.vertical, 24)
             }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("OOOPS!"),
+                      message: Text("You can do it! Please try again"),
+                      dismissButton: .default(Text("RETURN")))
+            }
+            
             
             
         }
         .onAppear {
-            wordGame.wordGame = true
+            alphabetGame.isWordGame = true
+            for i in 0..<wordData[wordGame.wordRandomIndex].wordID.count {
+                let char = alphabetData[wordData[wordGame.wordRandomIndex].wordID[i]]
+                alphabetList.append(char)
+            }
+
+        }
+        .onDisappear {
+            alphabetGame.isWordGame = false
         }
     }
     
