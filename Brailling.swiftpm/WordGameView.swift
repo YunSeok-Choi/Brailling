@@ -22,8 +22,9 @@ struct WordGameView: View {
                 ForEach(alphabetList, id: \.self) { char in
                     AlphabetView(alphabet: char, circleCheck: char.braille)
                 }
-            }.padding(.top)
-            
+            }
+            .padding(.top)
+            .animation(.easeInOut(duration: 0.3), value: alphabetList)
             
             TextField("Typing here", text: $answerText)
                 .frame(width: 200)
@@ -71,8 +72,10 @@ struct WordGameView: View {
     }
     
     func initList() {
-        for i in 0..<wordData[wordGame.wordRandomIndex].wordID.count {
-            let char = alphabetData[wordData[wordGame.wordRandomIndex].wordID[i]]
+        let words = wordData[wordGame.wordRandomIndex]
+        
+        for i in 0..<words.wordID.count {
+            let char = alphabetData[words.wordID[i]]
             alphabetList.append(char)
         }
     }

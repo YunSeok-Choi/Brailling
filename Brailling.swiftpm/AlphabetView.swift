@@ -25,9 +25,7 @@ struct AlphabetView: View {
                     Spacer(minLength: 50)
                 }
                 
-                
                 VStack {
-                    
                     Spacer()
                     
                     if !alphabetGame.isWordGame {
@@ -38,25 +36,20 @@ struct AlphabetView: View {
                     }
                     
                     HStack {
-                     
                         VStack {
-                            
                             BrailleCricle(circleColor: $circleCheck[0], isTab: $viewTab)
                             
                             BrailleCricle(circleColor: $circleCheck[1], isTab: $viewTab)
 
                             BrailleCricle(circleColor: $circleCheck[2], isTab: $viewTab)
-
                         }
                         
                         VStack {
-                            
                             BrailleCricle(circleColor: $circleCheck[3], isTab: $viewTab)
 
                             BrailleCricle(circleColor: $circleCheck[4], isTab: $viewTab)
 
                             BrailleCricle(circleColor: $circleCheck[5], isTab: $viewTab)
-
                         }
                         
                     }
