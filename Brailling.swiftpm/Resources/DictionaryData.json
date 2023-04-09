@@ -127,6 +127,132 @@
         "id" : 25,
         "charactor" : "Z z",
         "braille" : [true, false, true, false, true, true]
-    }
-    
+    },
+    {
+        "id" : 26,
+        "charactor" : "1",
+        "braille" : [true, false, false, false, false, false]
+    },
+    {
+        "id" : 27,
+        "charactor" : "2",
+        "braille" : [true, true, false, false, false, false]
+    },
+    {
+        "id" : 28,
+        "charactor" : "3",
+        "braille" : [true, false, false, true, false, false]
+    },
+    {
+        "id" : 29,
+        "charactor" : "4",
+        "braille" : [true, false, false, true, true, false]
+    },
+    {
+        "id" : 30,
+        "charactor" : "5",
+        "braille" : [true, false, false, false, true, false]
+    },
+    {
+        "id" : 31,
+        "charactor" : "6",
+        "braille" : [true, true, false, true, false, false]
+    },
+    {
+        "id" : 32,
+        "charactor" : "7",
+        "braille" : [true, true, false, true, true, false]
+    },
+    {
+        "id" : 33,
+        "charactor" : "8",
+        "braille" : [true, true, false, false, true, false]
+    },
+    {
+        "id" : 34,
+        "charactor" : "9",
+        "braille" : [false, true, false, true, false, false]
+    },
+    {
+        "id" : 35,
+        "charactor" : "0",
+        "braille" : [false, true, false, true, true, false]
+    },
+    {
+        "id" : 36,
+        "charactor" : "for",
+        "braille" : [true, true, true, true, true, true]
+    },
+    {
+        "id" : 37,
+        "charactor" : "and",
+        "braille" : [true, true, true, true, false, true]
+    },
+    {
+        "id" : 38,
+        "charactor" : "the",
+        "braille" : [false, true, true, true, false, true]
+    },
+    {
+        "id" : 39,
+        "charactor" : "ed",
+        "braille" : [true, true, false, false, false, true]
+    },
+    {
+        "id" : 40,
+        "charactor" : "ing",
+        "braille" : [false, false, true, true, false, true]
+    },
+    {
+        "id" : 41,
+        "charactor" : "ch",
+        "braille" : [true, false, false, false, false, true]
+    },
+    {
+        "id" : 42,
+        "charactor" : "en",
+        "braille" : [false, true, false, false, false, true]
+    },
+    {
+        "id" : 43,
+        "charactor" : "in",
+        "braille" : [false, false, true, false, true, false]
+    },
+    {
+        "id" : 44,
+        "charactor" : "wh",
+        "braille" : [true, false, false, false, true, true]
+    },
+    {
+        "id" : 45,
+        "charactor" : "gh",
+        "braille" : [true, true, false, false, false, true]
+    },
+    {
+        "id" : 46,
+        "charactor" : "ar",
+        "braille" : [false, false, true, true, true, false]
+    },
+    {
+        "id" : 47,
+        "charactor" : "th",
+        "braille" : [true, false, false, true, true, true]
+    },
+    {
+        "id" : 48,
+        "charactor" : "ow",
+        "braille" : [false, true, false, true, false, true]
+    },
+    {
+        "id" : 49,
+        "charactor" : "ou",
+        "braille" : [true, true, false, false, true, true]
+    },
+    {
+        "id" : 50,
+        "charactor" : "er",
+        "braille" : [true, true, false, true, true, true]
+    },
+
+
 ]
