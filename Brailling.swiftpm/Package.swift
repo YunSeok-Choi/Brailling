@@ -20,7 +20,7 @@ let package = Package(
             teamIdentifier: "PK2NRTCS5P",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .checkmark),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.purple),
             supportedDeviceFamilies: [
                 .pad,
