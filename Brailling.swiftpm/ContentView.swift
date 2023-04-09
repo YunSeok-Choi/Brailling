@@ -7,38 +7,42 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            
-            VStack {
+            ZStack {
                 
-                HStack {
-                    Text("Brai")
-                        .font(.system(size: 157, design: .rounded))
-                        .tracking(10)
-                    
-                    LView.frame(width: 80)
-                        .padding(.trailing, 20)
-                    
-                    LView.frame(width: 80)
-                    
-                    Text("ing")
-                        .font(.system(size: 157, design: .rounded))
-                        .tracking(10)
-                }
+                BackGroundView()
                 
-                HStack {
-                    NavigationLink(destination: DictionaryView()) {
-                        MainButtonView(label: "Braille Dictionary")
+                VStack {
+                    
+                    HStack {
+                        Text("Brai")
+                            .font(.system(size: 157, design: .rounded))
+                            .tracking(10)
+                        
+                        LView.frame(width: 80)
+                            .padding(.trailing, 20)
+                        
+                        LView.frame(width: 80)
+                        
+                        Text("ing")
+                            .font(.system(size: 157, design: .rounded))
+                            .tracking(10)
                     }
                     
-                    NavigationLink(destination: AlphabetGameView()) {
-                        MainButtonView(label: "Alphabet Game")
+                    HStack {
+                        NavigationLink(destination: DictionaryView()) {
+                            MainButtonView(label: "Braille Dictionary")
+                        }
+                        
+                        NavigationLink(destination: AlphabetGameView()) {
+                            MainButtonView(label: "Alphabet Game")
+                        }
+                        
+                        NavigationLink(destination: WordGameView()) {
+                            MainButtonView(label: "Word Typing Game")
+                        }
                     }
-                    
-                    NavigationLink(destination: WordGameView()) {
-                        MainButtonView(label: "Word Typing Game")
-                    }
+                    .padding(.bottom, -20)
                 }
-                .padding(.bottom, -20)
             }
             .onAppear {
                 gameManager.isWordGame = true
@@ -56,6 +60,7 @@ struct ContentView: View {
                 
                 BlackBraille()
             }
+
             VStack {
                 WhiteBraiile()
                 

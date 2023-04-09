@@ -15,7 +15,7 @@ extension LinearGradient {
 }
 
 extension View {
-    func frame(size: CGFloat) -> some View {
+    func frame(_ size: CGFloat) -> some View {
         return frame(width: size, height: size)
     }
 }

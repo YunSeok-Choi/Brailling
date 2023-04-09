@@ -10,62 +10,12 @@ import SwiftUI
 struct GuideView: View {
     @Binding var content: AppContent
     @State var guideStep = 1
-    var offsetLeftX: CGFloat = -100
-    var offsetRigthX: CGFloat = 100
-    var brailleSize: CGFloat = 250
-    
+
     var body: some View {
         ZStack {
-            VStack {
-                HStack {
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(x: offsetLeftX)
-                    
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(x: offsetLeftX)
-                    
-                    Spacer()
-                    
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(x: offsetRigthX)
-                    
-                }
-                
-                HStack {
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(x: offsetLeftX)
-                    
-                    Spacer()
-                    
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(x: offsetRigthX)
-                    
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(x: offsetRigthX)
-                }
-                
-                Spacer()
-                
-                HStack {
-                    Spacer()
-                    
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(y: offsetRigthX)
-                    
-                    Spacer()
-                    
-                    WhiteBraiile()
-                        .frame(size: brailleSize)
-                        .offset(y: offsetRigthX)
-                }
-            }
+            
+            BackGroundView()
+            
             TabView(selection: $guideStep) {
                 
                 VStack(alignment: .leading, spacing: 20){
@@ -90,10 +40,10 @@ struct GuideView: View {
                     Text("To do that, you would need to be able to read braille, right?")
                         .font(.title2)
                     
-                    Text("I'll briefly introduce each button for you.")
-                        .font(.title2)
+                    Text("Let’s Do it!")
+                        .font(.largeTitle)
                 }
-                .offset(x: offsetLeftX - 50)
+                .offset(x: -150)
                 .tag(2)
                 
             }
