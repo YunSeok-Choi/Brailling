@@ -10,42 +10,98 @@ import SwiftUI
 struct GuideView: View {
     @Binding var content: AppContent
     @State var guideStep = 1
-    var gameData = GameManager()
-
+    var offsetLeftX: CGFloat = -100
+    var offsetRigthX: CGFloat = 100
+    var brailleSize: CGFloat = 250
+    
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(.black)
-                .opacity(0.8)
-                .edgesIgnoringSafeArea(.all)
-            
+            VStack {
+                HStack {
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(x: offsetLeftX)
+                    
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(x: offsetLeftX)
+                    
+                    Spacer()
+                    
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(x: offsetRigthX)
+                    
+                }
+                
+                HStack {
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(x: offsetLeftX)
+                    
+                    Spacer()
+                    
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(x: offsetRigthX)
+                    
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(x: offsetRigthX)
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(y: offsetRigthX)
+                    
+                    Spacer()
+                    
+                    WhiteBraiile()
+                        .frame(size: brailleSize)
+                        .offset(y: offsetRigthX)
+                }
+            }
             TabView(selection: $guideStep) {
-                ZStack {
+                
+                VStack(alignment: .leading, spacing: 20){
+                    Text("Hello!")
+                        .font(.largeTitle)
                     
-                    RoundedRectangle(cornerRadius: 140, style: .continuous)
-                        .fill(.white)
-                        .frame(width: 500, height: 500)
-                        .padding()
+                    Text("This app helps you read the alphabet of Braille.")
+                        .font(.title2)
                     
-                    VStack {
-                        Text("Hello!")
-                        
-                        Text("Braille is a very important clue for someone.")
-                        
-                        Text("Check for yourself if this important clue is being well followed in your daily life!")
-                        
-                        Text("If it wasn't followed, you might be possible to fix it!")
-                        
-                        Text("To do that, you would need to be able to read Braille, right")
-                    }
+                    Text("Braille is a very important clue for someone.")
+                        .font(.title2)
+                    
+                    Text("Have fun learning Braille and check for yourself if this important clue is being well followed in your daily life!")
+                        .font(.title2)
                 }
                 .tag(1)
+                
+                VStack(alignment: .leading, spacing: 30) {
+                    Text("If it wasn't followed, you might be possible to fix it!")
+                        .font(.title2)
+                    
+                    Text("To do that, you would need to be able to read braille, right?")
+                        .font(.title2)
+                    
+                    Text("I'll briefly introduce each button for you.")
+                        .font(.title2)
+                }
+                .offset(x: offsetLeftX - 50)
+                .tag(2)
+                
             }
-            .tabViewStyle(.page(indexDisplayMode: .always))
+            .tabViewStyle(.page(indexDisplayMode: .never))
             .onTapGesture {
-                if guideStep == 4 {
+                if guideStep == 2{
                     content = .mainView
-                }else {
+                } else {
                     guideStep += 1
                 }
             }

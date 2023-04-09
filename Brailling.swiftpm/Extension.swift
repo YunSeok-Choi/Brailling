@@ -13,3 +13,9 @@ extension LinearGradient {
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }
+
+extension View {
+    func frame(size: CGFloat) -> some View {
+        return frame(width: size, height: size)
+    }
+}
