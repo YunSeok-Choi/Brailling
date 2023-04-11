@@ -13,10 +13,7 @@ struct DictionaryView: View {
     var body: some View {
         HStack {
             NavigationView {
-                VStack {
-                    Text("Various brailles here")
-                        .padding()
-                    
+                VStack {                    
                     List(alphabetData, id: \.id) { alphabet in
                         NavigationLink("\(alphabet.charactor)", destination: AlphabetView(alphabet: alphabet, circleCheck: alphabet.braille))
                     }

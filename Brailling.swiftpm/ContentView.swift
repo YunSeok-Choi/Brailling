@@ -44,9 +44,6 @@ struct ContentView: View {
                     .padding(.bottom, -20)
                 }
             }
-            .onAppear {
-                gameManager.isWordGame = true
-            }
         }
         .navigationViewStyle(.stack)
     }
