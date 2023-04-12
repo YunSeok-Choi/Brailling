@@ -29,6 +29,7 @@ struct WordGameView: View {
                 .frame(width: 200)
                 .textFieldStyle(.roundedBorder)
                 .font(.largeTitle)
+                .autocorrectionDisabled(true)
             
             Button {
                 if answerText.lowercased() == wordData[wordGame.wordRandomIndex].answer {

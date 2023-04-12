@@ -25,11 +25,9 @@ struct AlphabetGameView: View {
                     alphabetGame.doneCheck = true
                     alphabetGame.alphabetShuffle()
                     alphabetGame.soundManager.playSound(sound: .correct)
-                    // Answer Sound
                 } else {
                     showingAlert = true
                     alphabetGame.soundManager.playSound(sound: .wrong)
-                    // Wrong Sound
                 }
             } label: {
                 Text("DONE")
