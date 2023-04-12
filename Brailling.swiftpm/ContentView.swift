@@ -48,21 +48,21 @@ struct ContentView: View {
                             MainButtonView(label: "Braille Dictionary")
                         }
                         .simultaneousGesture(TapGesture().onEnded({
-                            gameManager.soundManager.playSound(sound: .stop)
+                            gameManager.soundManager.playSound(sound: .click)
                         }))
                         
                         NavigationLink(destination: AlphabetGameView()) {
                             MainButtonView(label: "Alphabet Game")
                         }
                         .simultaneousGesture(TapGesture().onEnded({
-                            gameManager.soundManager.playSound(sound: .stop)
+                            gameManager.soundManager.playSound(sound: .click)
                         }))
                         
                         NavigationLink(destination: WordGameView()) {
                             MainButtonView(label: "Word Typing Game")
                         }
                         .simultaneousGesture(TapGesture().onEnded({
-                            gameManager.soundManager.playSound(sound: .stop)
+                            gameManager.soundManager.playSound(sound: .click)
                         }))
                     }
                     .padding(.bottom, -20)

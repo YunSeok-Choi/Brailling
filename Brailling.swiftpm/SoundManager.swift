@@ -16,7 +16,7 @@ class SoundManager {
     enum SoundName: String {
         case correct = "correct"
         case wrong = "wrong"
-        case stop = "stop"
+        case click = "click"
     }
     
     func playSound(sound: SoundName) {
