@@ -43,6 +43,7 @@ struct BrailleCricle: View {
             .onTapGesture {
                 if isTab {
                     circleColor.toggle()
+                    gameManager.soundManager.playSound(sound: .tap)
                 }
             }
             .animation(.easeInOut(duration: 0.3), value: circleColor)

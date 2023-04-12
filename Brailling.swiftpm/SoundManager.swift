@@ -17,6 +17,7 @@ class SoundManager {
         case correct = "correct"
         case wrong = "wrong"
         case click = "click"
+        case tap = "tap"
     }
     
     func playSound(sound: SoundName) {
