@@ -16,13 +16,16 @@ struct ContentView: View {
                     
                     HStack {
                         Spacer()
-                        Image(systemName: "info.circle")
-                            .resizable()
-                            .frame(50)
-                            .padding(.trailing, 50)
-                            .onTapGesture {
-                                content = .guideView
-                            }
+                        
+                        Button {
+                            content = .guideView
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .frame(50)
+                                .padding(.trailing, 50)
+                                .foregroundColor(.black)
+                        }
                     }
                     
                     HStack {
@@ -69,7 +72,7 @@ struct ContentView: View {
                 
                 BlackBraille()
             }
-
+            
             VStack {
                 WhiteBraiile()
                 
