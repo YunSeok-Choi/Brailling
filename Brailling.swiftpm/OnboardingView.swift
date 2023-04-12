@@ -1,5 +1,5 @@
 //
-//  GuideView.swift
+//  OnboardingView.swift
 //  Brailling
 //
 //  Created by 최윤석 on 2023/04/09.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct GuideView: View {
+struct OnboardingView: View {
     @Binding var content: AppContent
-    @State var guideStep = 1
+    @State var OnboardingStep = 1
 
     var body: some View {
         ZStack {
             
             BackGroundView()
             
-            TabView(selection: $guideStep) {
+            TabView(selection: $OnboardingStep) {
                 
                 VStack(alignment: .leading, spacing: 20){
                     Text("Hello!")
@@ -49,10 +49,10 @@ struct GuideView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .onTapGesture {
-                if guideStep == 2{
+                if OnboardingStep == 2{
                     content = .mainView
                 } else {
-                    guideStep += 1
+                    OnboardingStep += 1
                 }
             }
         }

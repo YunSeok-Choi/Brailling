@@ -10,10 +10,10 @@ struct MyApp: App {
         WindowGroup {
             switch content {
             case .guideView:
-                GuideView(content: $content)
+                OnboardingView(content: $content)
                     .preferredColorScheme(.light)
             case .mainView:
-                ContentView()
+                ContentView(content: $content)
                     .environmentObject(gameData)
                     .preferredColorScheme(.light)
             }

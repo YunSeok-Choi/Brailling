@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var gameManager: GameManager
+    @Binding var content: AppContent
     var alphabetL = alphabetData[11]
     
     var body: some View {
@@ -12,6 +13,17 @@ struct ContentView: View {
                 BackGroundView()
                 
                 VStack {
+                    
+                    HStack {
+                        Spacer()
+                        Image(systemName: "info.circle")
+                            .resizable()
+                            .frame(50)
+                            .padding(.trailing, 50)
+                            .onTapGesture {
+                                content = .guideView
+                            }
+                    }
                     
                     HStack {
                         Text("Brai")
