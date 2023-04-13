@@ -13,6 +13,7 @@ struct WordGameView: View {
     @State var answerText: String = ""
     @State var showingAlert = false
     @State var alphabetList: [Alphabet] = []
+    let soundManager = SoundManager.sound
     
     var body: some View {
         VStack {
@@ -32,16 +33,16 @@ struct WordGameView: View {
                 .autocorrectionDisabled(true)
             
             Button {
-                if answerText.lowercased() == wordData[wordGame.wordRandomIndex].answer {
+                if answerText.lowercased() == wordGame.wordData[wordGame.wordRandomIndex].answer {
                     alphabetList = []
                     answerText = ""
                     
                     wordGame.wordShuffle()
                     initList()
-                    wordGame.soundManager.playSound(sound: .correct)
+                    soundManager.playSound(sound: .correct)
                 } else {
                     showingAlert = true
-                    wordGame.soundManager.playSound(sound: .wrong)
+                    soundManager.playSound(sound: .wrong)
                 }
             } label: {
                 Text("DONE")
@@ -67,10 +68,10 @@ struct WordGameView: View {
     }
     
     func initList() {
-        let words = wordData[wordGame.wordRandomIndex]
+        let words = wordGame.wordData[wordGame.wordRandomIndex]
         
         for i in 0..<words.wordID.count {
-            let char = alphabetData[words.wordID[i]]
+            let char = wordGame.alphabetData[words.wordID[i]]
             alphabetList.append(char)
         }
     }

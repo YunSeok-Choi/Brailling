@@ -12,6 +12,7 @@ struct BrailleCricle: View {
     @EnvironmentObject var gameManager: GameManager
     @Binding var circleColor: Bool
     @Binding var isTab: Bool
+    let soundManager = SoundManager.sound
     
     var body: some View {
         if gameManager.isWordGame {
@@ -43,7 +44,7 @@ struct BrailleCricle: View {
             .onTapGesture {
                 if isTab {
                     circleColor.toggle()
-                    gameManager.soundManager.playSound(sound: .tap)
+                    soundManager.playSound(sound: .tap)
                 }
             }
             .animation(.easeInOut(duration: 0.3), value: circleColor)

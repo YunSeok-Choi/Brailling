@@ -14,13 +14,13 @@ struct DictionaryView: View {
         HStack {
             NavigationView {
                 VStack {                    
-                    List(alphabetData, id: \.id) { alphabet in
+                    List(gameManager.alphabetData, id: \.id) { alphabet in
                         NavigationLink("\(alphabet.charactor)", destination: AlphabetView(alphabet: alphabet, circleCheck: alphabet.braille))
                     }
                     .listStyle(.inset)
                 }
                 .navigationTitle("Dictionary")
-                AlphabetView(alphabet: alphabetData[0], circleCheck: alphabetData[0].braille)
+                AlphabetView(alphabet: gameManager.alphabetData[0], circleCheck: gameManager.alphabetData[0].braille)
             }
             .onAppear {
                 gameManager.isWordGame = false

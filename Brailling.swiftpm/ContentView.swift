@@ -4,7 +4,9 @@ struct ContentView: View {
     
     @EnvironmentObject var gameManager: GameManager
     @Binding var content: AppContent
-    var alphabetL = alphabetData[11]
+    let soundManager = SoundManager.sound
+    
+//    var alphabetL = gameManager.alphabetData[11]
     
     var body: some View {
         NavigationView {
@@ -19,6 +21,7 @@ struct ContentView: View {
                         
                         Button {
                             content = .guideView
+                            soundManager.playSound(sound: .click)
                         } label: {
                             Image(systemName: "info.circle")
                                 .resizable()
@@ -48,21 +51,21 @@ struct ContentView: View {
                             MainButtonView(label: "Braille Dictionary")
                         }
                         .simultaneousGesture(TapGesture().onEnded({
-                            gameManager.soundManager.playSound(sound: .click)
+                            soundManager.playSound(sound: .click)
                         }))
                         
                         NavigationLink(destination: AlphabetGameView()) {
                             MainButtonView(label: "Alphabet Game")
                         }
                         .simultaneousGesture(TapGesture().onEnded({
-                            gameManager.soundManager.playSound(sound: .click)
+                            soundManager.playSound(sound: .click)
                         }))
                         
                         NavigationLink(destination: WordGameView()) {
                             MainButtonView(label: "Word Typing Game")
                         }
                         .simultaneousGesture(TapGesture().onEnded({
-                            gameManager.soundManager.playSound(sound: .click)
+                            soundManager.playSound(sound: .click)
                         }))
                     }
                     .padding(.bottom, -20)
