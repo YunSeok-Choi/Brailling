@@ -20,7 +20,7 @@ class GameManager: ObservableObject {
     init() {
         self.alphabetData = load("DictionaryData.json")
         self.wordData = load("WordData.json")
-        wordRandomIndex = Int.random(in: 0..<wordData.count)
+        self.wordRandomIndex = Int.random(in: 0..<wordData.count)
     }
     
     func alphabetShuffle() {
