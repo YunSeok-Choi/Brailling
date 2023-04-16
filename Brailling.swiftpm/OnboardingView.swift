@@ -30,6 +30,9 @@ struct OnboardingView: View {
                     
                     Text("Have fun learning Braille and check for yourself if this important clue is being well followed in your daily life!")
                         .font(.title2)
+                    
+                    Text("(Recommend landscape mode)")
+                        .font(.callout)
                 }
                 .tag(1)
                 
@@ -43,7 +46,7 @@ struct OnboardingView: View {
                     Text("Let’s Do it!")
                         .font(.largeTitle)
                 }
-                .offset(x: -150)
+                .offset(x: -100)
                 .tag(2)
                 
             }
